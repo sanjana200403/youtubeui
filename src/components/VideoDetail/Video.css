@@ -1,6 +1,6 @@
 .play-container{
     padding-left: 2%;
-    height: 100vh;
+    /* height: 100vh; */
 
 }
 .main-container-row{
@@ -12,8 +12,6 @@
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
-  
-    
     padding: 10px;
 }
 .play-video .tags a{
@@ -24,8 +22,8 @@
 }
 .right-sidebar{
     flex-basis: 40%;
-    height: 80vh;
-    overflow: auto;
+    /* height: 80vh; */
+    /* overflow: auto; */
     
 }
 .play-video iframe {
@@ -33,11 +31,15 @@
     object-fit: cover;
     height: 600px;
 }
+.play-video hr{
+    height: 4px;
+    background-color: #5a5a5a;
+}
 .side-video-list{
+    padding: 10px;
 
     display: flex;
-    display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     width: 100%;
     gap: 10px;
     margin-top: 10px;
@@ -46,19 +48,16 @@
 
 .side-video-list .small-img{
     /* flex-basis: 40%; */
-    max-width: 200px;
-width: 200px;
+    /* max-width: 50%; */
+    width: 200px;
     object-fit: cover;
 }
 .side-video-list .video-desc{
-max-width: 50%;
+/* max-width: 50%; */
 display: flex;
 flex-direction: column;
 gap: 2px;
-  
-
-
-}
+  }
 .side-video-list h1{
     
     font-size: 15px;
@@ -94,16 +93,81 @@ gap: 2px;
     font-size: 15px;
 
 }
+.channel-info button{
+    padding: 5px;
+    color: aliceblue;
+    background-color: rgb(244, 12, 12);
+    border: 2px solid white;
+    border-radius: 4px;
+}
 
 .options{
     display: flex;
     align-items: center;
-    gap: 20pxsss;
+    gap: 20px;
     object-fit: cover;
+}
+.play-desc{
+    padding: 5px;
+    margin-bottom: 5px;
 }
 .options img{
     width: 30px;
     height: 30px;
     object-fit: contain;
 
+}
+@media(max-width:1250px){
+    .main-container-row{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+    .play-video{
+        flex-basis: 100%;
+    }
+
+    .right-sidebar{
+        flex-basis: 100%;
+        padding: 0;
+    }
+    .side-video-list{
+       flex-basis: 100%;
+       width: 100%;
+       max-width: 100%;
+    
+
+    }
+    .side-video-list .small-img{
+        /* flex-basis: 40%; */
+        max-width: 30%;
+        width: 200px;
+        object-fit: cover;
+    }
+    .side-video-list .video-desc{
+    max-width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+      }
+}
+@media(max-width:500px){
+    .play-video iframe{
+        height: 300px;
+    }
+    .options{
+gap: 5px;
+    }
+    .options img{
+        width: 15px;
+        height: 15px;
+        object-fit: contain;
+    }
+    .channel-info img{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+
+    }
 }
